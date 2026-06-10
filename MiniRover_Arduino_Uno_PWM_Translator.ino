@@ -102,7 +102,7 @@ void CytronMD::setSpeed(int16_t speed)
 
 
 // --- Cytron motor driver setup ---
-CytronMD motor1(PWM_PWM, 9, 8);   // Motor 1 on pins 8 & 9 
+CytronMD motor1(PWM_PWM, 6, 5);   // Motor 1 on pins 6 & 5 
 CytronMD motor2(PWM_PWM, 10, 11); // Motor 2 on pins 10 & 11
 
 // --- Interrupt PWM variables ---
