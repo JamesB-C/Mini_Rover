@@ -112,15 +112,15 @@ volatile unsigned long pulseStart2 = 0;
 volatile unsigned long pulseWidth2 = 1500;
 
 // --- PWM signal specs ---
-const int pwmMin = 1000;
+const int pwmMin = 952;
 const int pwmCenter = 1500;
-const int pwmMax = 2000;
-const int deadband = 30;
+const int pwmMax = 2008;
+const int deadband = 40;
 
 // --- Smoothed values ---
 float smoothSpeed1 = 0;
 float smoothSpeed2 = 0;
-const float alpha = 0.15;  // Smoothing factor (between 0 and 1)
+const float alpha = 0.5;  // Smoothing factor (between 0 and 1)
 
 // --- Timing for failsafe ---
 unsigned long lastSignalTime1 = 0;
@@ -134,7 +134,7 @@ void setup() {
   attachInterrupt(digitalPinToInterrupt(2), pwmInput1Change, CHANGE);
   attachInterrupt(digitalPinToInterrupt(3), pwmInput2Change, CHANGE);
 
-  Serial.begin(115200);
+  Serial.begin(9600);
 }
 
 void loop() {
