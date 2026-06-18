@@ -120,7 +120,7 @@ const int deadband = 40;
 // --- Smoothed values ---
 float smoothSpeed1 = 0;
 float smoothSpeed2 = 0;
-const float alpha = 0.5;  // Smoothing factor (between 0 and 1)
+const float alpha = 0.125;  // Smoothing factor (between 0 and 1)
 
 // --- Timing for failsafe ---
 unsigned long lastSignalTime1 = 0;
